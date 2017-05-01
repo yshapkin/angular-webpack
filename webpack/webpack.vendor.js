@@ -16,7 +16,6 @@ module.exports = {
             'angular2-cookie',
             'angular2-infinite-scroll',
             'jquery',
-            'ng-jhipster',
             'ng2-webstorage',
             'rxjs'
         ]
