@@ -10,14 +10,15 @@ import {
     imports: [
         SharedLibsModule
     ],
+    exports: [
+        SharedLibsModule
+    ],
     declarations: [
     ],
     providers: [
         CookieService
     ],
     entryComponents: [
-    ],
-    exports: [
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -28,7 +28,7 @@
   "packages": [],
   "e2e": {
     "protractor": {
-      "config": "src/test/javascript/protractor.conf.js"
+      "config": "src/test/protractor.conf.js"
     }
   },
   "lint": [{
@@ -40,7 +40,7 @@
   ],
   "test": {
     "karma": {
-      "config": "src/test/javascript/karma.conf.js"
+      "config": "src/test/karma.conf.js"
     }
   },
   "defaults": {

@@ -1,0 +1,1 @@
+export const API_HOST_BASE = 'https://jsonplaceholder.typicode.com';

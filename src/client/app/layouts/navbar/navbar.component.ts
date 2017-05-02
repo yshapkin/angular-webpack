@@ -9,10 +9,7 @@ import { VERSION, DEBUG_INFO_ENABLED } from '../../app.constants';
     styleUrls: ['navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-    inProduction: boolean;
     isNavbarCollapsed: boolean;
-    swaggerEnabled: boolean;
 
     constructor(
         private router: Router

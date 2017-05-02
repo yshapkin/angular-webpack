@@ -1,14 +1,17 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { SharedModule } from '../shared';
+import {
+    SharedModule,
+    PostsService
+} from '../shared';
 
 import { HOME_ROUTE, HomeComponent } from './';
 
 @NgModule({
     imports: [
         SharedModule,
-        RouterModule.forRoot([ HOME_ROUTE ], { useHash: true })
+        RouterModule.forRoot([HOME_ROUTE], { useHash: true })
     ],
     declarations: [
         HomeComponent,
@@ -16,7 +19,9 @@ import { HOME_ROUTE, HomeComponent } from './';
     entryComponents: [
     ],
     providers: [
+        PostsService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class HomeModule {}
+export class HomeModule {
+}

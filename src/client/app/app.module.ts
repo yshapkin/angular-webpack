@@ -1,33 +1,31 @@
 import './vendor.ts';
 
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
 import { SharedModule } from './shared';
 import { HomeModule } from './home/home.module';
-
-import { LayoutRoutingModule } from './layouts';
+import { RoutingModule } from './app.route';
 
 import {
     MainComponent,
     NavbarComponent,
-    FooterComponent,
-    ErrorComponent
+    FooterComponent
 } from './layouts';
 
 @NgModule({
     imports: [
-        BrowserModule,
-        LayoutRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'app', separator: '-'}),
         SharedModule,
+        RoutingModule,
         HomeModule
+    ],
+    exports: [
+        SharedModule,
     ],
     declarations: [
         MainComponent,
         NavbarComponent,
-        ErrorComponent,
         FooterComponent
     ],
     providers: [
