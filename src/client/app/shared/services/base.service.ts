@@ -6,12 +6,13 @@ import 'rxjs/Rx';
 import { API_HOST_BASE } from '../../shared';
 
 @Injectable()
-export abstract class BaseService {
+export abstract class BaseService<T> {
     protected ApiHostBase: string = API_HOST_BASE;
 
     constructor(protected httpSrv: Http) { }
 
-    protected get(apiRoute: string): Observable<any> {
-        return this.httpSrv.get(API_HOST_BASE + apiRoute);
+    protected get<T>(apiRoute: string): Observable<T> {
+        return this.httpSrv.get(API_HOST_BASE + apiRoute)
+            .map((res: Response) => res.json() as T);
     }
 }

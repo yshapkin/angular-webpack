@@ -17,8 +17,6 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.postsSrv.getPosts().subscribe((t) => {
-            this.posts = t;
-        });
+        this.postsSrv.getPosts().subscribe((t) =>  this.posts = t);
     }
 }

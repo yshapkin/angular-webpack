@@ -6,11 +6,10 @@ import { BaseService } from './base.service';
 import { UserModel } from '../../shared';
 
 @Injectable()
-export class PostsService extends BaseService {
+export class PostsService extends BaseService<UserModel> {
     private apiRoute = '/posts/';
 
     public getPosts(): Observable<UserModel[]> {
-        return this.get(this.apiRoute)
-            .map((res: Response) => res.json() as UserModel[]);
+        return this.get(this.apiRoute);
     }
 }
